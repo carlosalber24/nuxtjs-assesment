@@ -1,0 +1,167 @@
+$color-completed: rgb(9, 149, 57);
+$color-pending: rgb(221, 193, 16);
+$color-all: rgb(12, 117, 200);
+$common-variation1: #fff;
+$common-variation2: #000;
+$common-variation3: rgb(47, 214, 111);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Fira sans', sans-serif;
+}
+
+body {
+	background-color: rgb(38, 35, 54);
+	color: $common-variation1;
+
+	main {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 2rem;
+
+		h1 {
+			font-size: 2.5rem;
+			text-transform: capitalize;
+			margin-bottom: 0.5rem;
+		}
+
+		h1 ~ p {
+			margin-bottom: 2rem;
+		}
+
+		.create-new {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			max-width: 480px;
+
+			input {
+				appearance: none;
+				border: none;
+				outline: none;
+				border-bottom: 1px solid $common-variation1;
+				background-color: transparent;
+				color: $common-variation1;
+				font-size: 17px;
+				padding-top: 0.5rem;
+				padding-bottom: 0.5rem;
+				margin: 0;
+				transition: 0.4s;
+
+				&:focus {
+					border-bottom-color: $common-variation3;
+				}
+			}
+
+			button {
+				appearance: none;
+				border: none;
+				outline: none;
+				background-color: $common-variation3;
+				text-transform: uppercase;
+				font-weight: bold;
+				color: $common-variation2;
+				font-size: 16px;
+				padding: 0.5rem 1rem;
+				border-radius: 0.5rem;
+				margin-left: 0.5rem;
+        margin-top: 8px;
+				cursor: pointer;
+			}
+		}
+
+    .filters {
+      button {
+				appearance: none;
+				border: none;
+				outline: none;
+				background-color: $common-variation3;
+				text-transform: uppercase;
+				font-weight: bold;
+				color: $common-variation1;
+				font-size: 16px;
+				padding: 0.5rem 1rem;
+				border-radius: 0.5rem;
+				margin-left: 0.5rem;
+        margin-top: 10px;
+				cursor: pointer;
+			}
+      .completed {
+        background-color: $color-completed;
+      }
+      .pending {
+        background-color: $color-pending;
+      }
+      .all {
+        background-color: $color-all;
+      }
+      .filter-text {
+        text-align: center;
+        width: 100%;
+        margin-top: 25px
+      }
+    }
+
+		.tasks {
+			width: 100%;
+			max-width: 480px;
+			margin-top: 2rem;
+
+			.task {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				background-color: rgb(52, 47, 78);
+				padding: 1rem;
+				border-radius: 0.5rem;
+				margin-bottom: 1rem;
+
+				&.is-complete {
+					opacity: 0.5;
+
+					.content {
+						text-decoration: line-through;
+					}
+				}
+
+				.buttons {
+					min-width: fit-content;
+				}
+
+				button {
+					appearance: none;
+					border: none;
+					outline: none;
+					background-color: $common-variation3;
+					text-transform: uppercase;
+					font-weight: bold;
+					color: $common-variation2;
+					font-size: 0.875rem;
+					padding: 0.5rem 1rem;
+					border-radius: 0.5rem;
+					margin-left: 0.5rem;
+					cursor: pointer;
+
+					&.delete {
+						background-color: crimson;
+						color: $common-variation1;
+					}
+				}
+			}
+		}
+
+		.footer {
+			width: auto;
+			height: auto;
+			text-align: center;
+			text-justify: auto;
+			padding-top: 200px;
+			padding-bottom: 20px;
+		}
+	}
+}
