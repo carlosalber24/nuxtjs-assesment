@@ -23,7 +23,7 @@ npm install ó yarn install
 Para ejecutar el proyecto en modo de desarrollo, usa el comando:
 
 ```bash
-npm run serve ó yarn serve
+npm run dev ó yarn dev
 ```
 
 ## Construcción para producción
@@ -36,17 +36,17 @@ npm run build ó yarn build
 
 ## Ejecución de pruebas
 
-Para ejecutar las pruebas unitarias, utiliza:
+Para ejecutar las pruebas unitarias con jest, utiliza:
 
 ```bash
-npm run test:unit ó yarn test:unit
+npm run test ó yarn test
 ```
 
-Para pruebas de extremo a extremo con Cypress:
+Para pruebas de extremo a extremo (e2e) con Cypress:
 
 ```bash
-npm run test:e2e ó yarn test:e2e
+npm run e2e ó yarn e2e
 ```
 
 ## Contacto
-Desarrollador - Carlos Rodríguez - https://www.linkedin.com/in/carlos-rodríguez-gonzalez-b42ab8a3/
+Desarrollador Javascript - Carlos Rodríguez - https://www.linkedin.com/in/carlos-rodríguez-gonzalez-b42ab8a3/

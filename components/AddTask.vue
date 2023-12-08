@@ -7,6 +7,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { sanitizeInput } from '@/utils/helpers';
 
 const newTask = ref<string>('');
 const emit = defineEmits(['add-task']);
@@ -14,7 +15,7 @@ const emit = defineEmits(['add-task']);
 const addTask = () => {
   const taskValue = newTask.value.trim();
   if (taskValue) {
-    emit('add-task', taskValue);
+    emit('add-task', sanitizeInput(taskValue));
     newTask.value = '';
   }
 };

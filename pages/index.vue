@@ -21,7 +21,6 @@
 </template>
 
 <script lang="ts" setup>
-//import { ref, computed, type Ref } from 'vue';
 import useTasksStore from '@/store/tasks';
 import AddTask from '@/components/AddTask.vue';
 import TaskList from '@/components/TaskList.vue';
