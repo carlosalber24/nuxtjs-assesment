@@ -1,4 +1,4 @@
-import { type Task } from '@/interfaces/tasks';
+import { type Task } from '../interfaces/tasks';
 
 import { defineStore } from 'pinia';
 

@@ -1,7 +1,7 @@
 <template>
   <section class="tasks">
     <div v-for="task in tasks" :key="task.id" class="task-item">
-      <article :class="`task ${task.completed ? 'is-complete' : ''}`">
+      <article :class="`task ${task.completed ? 'is-complete' : 'is-not-complete'}`">
         <div class="content">{{ task.name }}</div>
         <div class="buttons">
             <button @click="completeTask(task.id)">{{ task.completed ? 'Deshacer' : 'Completar' }}</button>

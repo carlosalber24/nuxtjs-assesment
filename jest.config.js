@@ -1,14 +1,25 @@
 module.exports = {
-  moduleFileExtensions: ['js', 'jsx', 'json', 'vue'],
-  transform: {
-    '^.+\\.vue$': 'vue-jest',
-    '^.+\\.jsx?$': 'babel-jest'
-  },
+  preset: 'ts-jest/presets/default-esm',
+  testEnvironment: 'jsdom',
+  moduleFileExtensions: ['js', 'json', 'vue', 'ts'],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1'
+    '^(\\.{1,2}/.*)\\.js$': '$1'
   },
-  testMatch: [
-    '**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
+  transform: {
+    '.*\\.(vue)$': '@vue/vue3-jest',
+    '^.+\\.js$': 'babel-jest',
+    '^.+\\.ts$': [
+      'ts-jest',
+      { useESM: true, isolatedModules: true },
+    ],
+    '^.+\\.tsx?$': [
+      'ts-jest',
+      { useESM: true, isolatedModules: true },
+    ]
+  },
+  collectCoverage: true,
+  collectCoverageFrom: [
+    '<rootDir>/components/**/*.vue',
+    '<rootDir>/pages/**/*.vue',
   ],
-  testURL: 'http://localhost/'
-}
+};

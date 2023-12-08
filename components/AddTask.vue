@@ -1,6 +1,6 @@
 <template>
   <div class="create-new">
-    <input v-model="newTask" type="text" placeholder="Añade una nueva tarea..." @keypress.enter="addTask" />
+    <input v-model="newTask" type="text" placeholder="Añade una nueva tarea..." @keypress.enter="addTask" name="newTask" />
     <button @click="addTask">Añadir Tarea</button>
   </div>
 </template>
